@@ -13,8 +13,12 @@
     <div id="app2">
         <span v-bind:title="message">
             passe ta souris sur moi
-          </span>
+        </span>
 
+    </div>
+
+    <div id="app3">
+        <p v-if="seen">Un message qui s'affiche suivant une condition</p>
     </div>
 
     <script>
@@ -29,6 +33,13 @@
             el: '#app2',
             data: {
             message: 'Je suis affiché en passant la souris'
+            }
+        })
+
+        var app3 = new Vue ({
+            el: '#app3',
+            data: {
+                seen: false
             }
         })
 
