@@ -19,6 +19,8 @@
 
     <div id="app3">
         <p v-if="seen">Un message qui s'affiche suivant une condition</p>
+
+        <button v-on:click="show"> réveler/cacher message</button>
     </div>
 
     <script>
@@ -39,12 +41,19 @@
         var app3 = new Vue ({
             el: '#app3',
             data: {
-                seen: false
+                seen: true
+            },
+
+            methods: {
+                show(event) {
+                    this.seen = !this.seen;
+                }
             }
         })
 
 
 
     </script>
+
 </body>
 </html>
